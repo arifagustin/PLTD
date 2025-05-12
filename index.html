@@ -1,187 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portal Maintenance PLTD</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-light: #3b82f6;
-      --bg: #ffffff;
-      --text: #1e293b;
-      --card: #f8fafc;
-      --hover-bg: #e0f2fe;
-      --tooltip-bg: rgba(0, 0, 0, 0.75);
-      --warning: #f97316;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px 10px;
-      background-color: var(--card);
-      box-shadow: 0 1px 4px var(--shadow);
-    }
-
-    header h1 {
-      font-size: 2rem;
-      color: var(--primary);
-    }
-
-    header p {
-      font-size: 1rem;
-      margin-top: 8px;
-      color: #475569;
-    }
-
-    .link-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 24px;
-      padding: 40px 20px;
-    }
-
-    .link-card {
-      background-color: var(--card);
-      border-radius: 16px;
-      padding: 30px 24px;
-      min-width: 260px;
-      max-width: 320px;
-      text-align: center;
-      color: var(--text);
-      text-decoration: none;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 6px 18px var(--shadow);
-      cursor: pointer;
-    }
-
-    .link-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-      background-color: var(--hover-bg);
-    }
-
-    .link-card i {
-      display: block;
-      margin-bottom: 16px;
-      font-size: 2rem;
-      color: var(--primary);
-    }
-
-    .link-card::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--tooltip-bg);
-      color: white;
-      padding: 8px 12px;
-      font-size: 0.85rem;
-      border-radius: 6px;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .link-card:hover::after {
-      opacity: 1;
-    }
-
-    .warning {
-      background-color: var(--warning);
-      color: white;
-      text-align: center;
-      padding: 16px 24px;
-      margin: 0 20px 30px;
-      border-radius: 10px;
-      font-weight: 600;
-      animation: blink 2s infinite;
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      font-size: 0.9rem;
-      color: #64748b;
-      background-color: var(--card);
-      margin-top: auto;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Maintenance PLTD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
       }
-      .link-card {
-        width: 100%;
-        max-width: 90%;
-      }
-      .link-container {
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 min-h-screen flex flex-col">
 
-  <header>
-    <h1>🛠️ Portal Maintenance PLTD</h1>
-    <p>Silakan pilih tujuan Maintenance Anda</p>
-  </header>
+    <header class="text-center py-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-blue-600 animate-fadeIn">🌐 Portal Maintenance PLTD</h1>
+      <p class="text-gray-500 mt-2">Silakan pilih tujuan Maintenance Anda</p>
+    </header>
 
-  <div class="link-container">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7QPir8-9sHktA_NE1HuWVhOfWau4D-Hic4-TaNNdO6W1tGA/viewform?usp=sharing" class="link-card" data-tooltip="Gunakan Gmail Anda dan pastikan data terisi benar.">
-      <i data-feather="check-square"></i>
-      Form Checklist Maintenance Genset
-    </a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxDJX2QxuPvsp4fzNQ3Q7NbBr2CWgHdX4gY-t2KKUV4M5mVQ/viewform?usp=sharing" class="link-card" data-tooltip="Isi checklist untuk KWH & Flow Meter.">
-      <i data-feather="check-square"></i>
-      Form Checklist KWH & Flow Meter
-    </a>
-    <a href="https://docs.google.com/spreadsheets/d/1xJt4j2Wnvk86uycVe1JnoYS-Xdld3gGXC8yTF7UX9ds/edit?usp=sharing" class="link-card" data-tooltip="Lihat dan unduh laporan maintenance.">
-      <i data-feather="file-text"></i>
-      Lihat Laporan Maintenance
-    </a>
-  </div>
+    <main class="flex flex-col items-center px-4 space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
 
-  <div class="warning">
-    ⚠️ Perhatian: Gunakan akun Gmail terdaftar. Jika belum, daftarkan akun terlebih dahulu.
-  </div>
+        <!-- Genset Form -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7QPir8-9sHktA_NE1HuWVhOfWau4D-Hic4-TaNNdO6W1tGA/viewform?usp=sharing"
+          class="group bg-blue-100 hover:bg-blue-500 hover:text-white transition rounded-2xl p-6 shadow-md relative"
+          data-tooltip="Gunakan Gmail Anda dan pastikan data terisi benar.">
+          <div class="flex flex-col items-center">
+            <i data-feather="check-square" class="text-blue-600 group-hover:text-white w-8 h-8 mb-3"></i>
+            <p class="font-semibold text-center">Form Checklist Maintenance Genset</p>
+          </div>
+        </a>
 
-  <footer>
-    &copy; <span id="year"></span> Sobatpower. All rights reserved.
-  </footer>
+        <!-- KWH Form -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxDJX2QxuPvsp4fzNQ3Q7NbBr2CWgHdX4gY-t2KKUV4M5mVQ/viewform?usp=sharing"
+          class="group bg-green-100 hover:bg-green-500 hover:text-white transition rounded-2xl p-6 shadow-md relative"
+          data-tooltip="Isi checklist untuk KWH & Flow Meter.">
+          <div class="flex flex-col items-center">
+            <i data-feather="check-square" class="text-green-600 group-hover:text-white w-8 h-8 mb-3"></i>
+            <p class="font-semibold text-center">Form Checklist KWH & Flow Meter</p>
+          </div>
+        </a>
 
-  <script>
-    feather.replace();
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        <!-- Report View -->
+        <a href="https://docs.google.com/spreadsheets/d/1xJt4j2Wnvk86uycVe1JnoYS-Xdld3gGXC8yTF7UX9ds/edit?usp=sharing"
+          class="group bg-purple-100 hover:bg-purple-500 hover:text-white transition rounded-2xl p-6 shadow-md relative"
+          data-tooltip="Lihat dan unduh laporan maintenance.">
+          <div class="flex flex-col items-center">
+            <i data-feather="file-text" class="text-purple-600 group-hover:text-white w-8 h-8 mb-3"></i>
+            <p class="font-semibold text-center">Lihat Laporan Maintenance</p>
+          </div>
+        </a>
 
-</body>
+        <!-- Foto Dokumentasi -->
+        <a href="https://drive.google.com/drive/folders/1QVHZPN13GmB_mCrccYxKwuVtgfeX7RH9ZDhY2BWuqn1Evn948XyEseOmIMMHxcB7WvhcJufF?usp=sharing"
+          class="group bg-orange-100 hover:bg-orange-500 hover:text-white transition rounded-2xl p-6 shadow-md relative"
+          data-tooltip="Lihat dokumentasi foto hasil maintenance.">
+          <div class="flex flex-col items-center">
+            <i data-feather="image" class="text-orange-600 group-hover:text-white w-8 h-8 mb-3"></i>
+            <p class="font-semibold text-center">Lihat Foto Dokumentasi</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Warning Box -->
+      <div class="bg-red-100 text-red-700 border border-red-400 px-6 py-4 rounded-lg max-w-xl text-center animate-pulse">
+        ⚠️ Perhatian: Pastikan Anda memiliki akun Gmail yang terdaftar untuk mengakses aplikasi ini.
+      </div>
+    </main>
+
+    <footer class="mt-auto py-4 text-center text-sm text-gray-500 bg-gray-100">
+      &copy; <span id="year"></span> Sobatpower. All rights reserved.
+    </footer>
+
+    <script>
+      feather.replace();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+  </body>
 </html>
